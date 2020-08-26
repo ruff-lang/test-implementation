@@ -1,3 +1,3 @@
-# Implementation Experiments
+# Implementation
 
-Repository to hold test implementations of the language specification. Until a finalized `v1.0.0` implementation is close to being doing, the canonical implementation will live in this repository.
+Reference implementation for the Bunny programming language. This repository holds the compiler and the core language.
