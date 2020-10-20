@@ -1,0 +1,4 @@
+(executable
+ (public_name bunny)
+ (name main)
+ (libraries bunny))
