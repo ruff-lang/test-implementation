@@ -7,5 +7,6 @@
  * with a λ-calculus which is then converted to bytecode.
  *
  * This is not an AOT compiler, though it might eventually be capable
- * of emitting C code.
+ * of emitting C code and use gcc bindings to handle generating static
+ * binaries.
  *)
