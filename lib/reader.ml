@@ -1,7 +1,11 @@
 (*
- * Bunny language reader implementation.
+ * Reader
  *
- * This file contains the code to read a .bn source code file and store
- * it as an internal data-structure in memory. In other words, read Bunny
- * source files into an AST.
+ * The reader is responsible for reading in bunny source code files with the .bn
+ * extension and converts the text to an in-memory abstract syntax tree (AST).
+ * The AST is then fed to the compiler.
+ *
+ * It exposes a general interface to process files comprising the entire
+ * application ahead of time and also read individual text into an AST (for
+ * example, expressions in the REPL).
  *)

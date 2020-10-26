@@ -1,12 +1,11 @@
 (*
- * Bunny compiler
+ * Compiler
  *
- * This file contains the main compiler for Bunny, the main purpose of
- * this compiler is to take the in-memory representation from the reader
- * and apply any source-to-source transformations and eventually end up
- * with a λ-calculus which is then converted to bytecode.
+ * The main compiler for Bunny. It takes an AST produced by the reader and feeds
+ * it through a series of compilation steps. The AST is converted first into
+ * A-Normal Form λ calculus and is eventually converted to bytecode.
  *
- * This is not an AOT compiler, though it might eventually be capable
- * of emitting C code and use gcc bindings to handle generating static
- * binaries.
+ * The compiler can do both:
+ * - generate bytecode at runtime, useful for the REPL or simple scripts
+ * - pre-process applications into bytecode to remove runtime overhead
  *)
