@@ -2,6 +2,8 @@
 
 Reference implementation for the Bunny programming language. This repository holds the compiler and the core language.
 
+You can look at the [specification](https://github.com/bunny-lang/specification) or visit the [Bunny website](https://bunny-lang.org) for a high level overview of the language.
+
 # Development
 
 The reference implementation is written in [OCaml](https://ocaml.org/). To get started, you need to install [opam](https://opam.ocaml.org/) and the compiler.
