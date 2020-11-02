@@ -11,12 +11,12 @@ let help_lines = [
     "       carrot    Interact with the carrot system to add or remove libraries.";
     "       doc       Use the documentation generator tool.";
     "       exec      Execute an installed binary carrot (program).";
-    "       format    Format the current project or provided file.";
+    "       format    Format the current project, provided directory (recursively), or file.";
     "       help      Print this help text.";
     "       new       Create a new project or carrot skeleton.";
     "       repl      Launch an interactive REPL for Bunny.";
     "       run       Run a file containing Bunny code.";
-    "       test      Runs all tests for the current project.";
+    "       test      Runs all or provided tests for the current project.";
     "       version   Prints the current version of Bunny.";
     "";
     "To get more usage information on a specific command:";
