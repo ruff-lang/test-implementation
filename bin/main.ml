@@ -23,7 +23,12 @@ let help_lines = [
   ]
 
 (* Simple helper function to print out the help text *)
-let print_help = List.iter (fun elem -> Printf.printf "%s\n" elem) help_lines
+let print_help = List.iter
+                   (fun elem -> Printf.printf "%s\n" elem)
+                   help_lines
+
+(* If the help command is given another argument command, print the help text for that command *)
+let print_help_command command = Printf.printf "unimplemented help: %s\n" command
 
 (* Main program entrypoint, parses the arguments and dispatches the appropriate module *)
 let () = print_help
