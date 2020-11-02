@@ -18,13 +18,13 @@ $ ocaml -version  # confirm that the compiler is installed
 
 We use [dune](https://dune.build/) as the build system, so familiarity with both OCaml and dune is recommended.
 
-``` bash
+```
 $ opam install dune
 ```
 
 You can run `bunny` directly using dune:
 
-``` bash
+```
 $ dune exec bunny
 The Bunny Programming Language 🐰
 
