@@ -1,13 +1,6 @@
 (* Main program entrypoint for Bunny. *)
 
-(* List of strings to print out for help or when no arguments are given. *)
-let help_lines = [
-    "The Bunny Programming Language";
-    "";
-    "";
-    "";
-  ]
-
+(* String to print out for help or when no arguments are given. *)
 let help_string =
   "The Bunny Programming Language 🐰\n\n\
    usage: bunny <command> <arguments>\n\n\
