@@ -2,34 +2,29 @@
 
 (* List of strings to print out for help or when no arguments are given. *)
 let help_lines = [
-    "The Bunny Programming Language 🐰";
+    "The Bunny Programming Language";
     "";
-    "usage: bunny <command> <arguments>";
     "";
-    "The most commonly used bunny commands are:";
-    "       build     Compiles the current project to bytecode.";
-    "       carrot    Interact with the carrot system to add or remove libraries.";
-    "       doc       Use the documentation generator tool.";
-    "       exec      Execute an installed binary carrot (program).";
-    "       format    Format the current project, provided directory (recursively), or file.";
-    "       help      Print this help text.";
-    "       new       Create a new project or carrot skeleton.";
-    "       repl      Launch an interactive REPL for Bunny.";
-    "       run       Run a file containing Bunny code.";
-    "       test      Runs all or provided tests for the current project.";
-    "       version   Prints the current version of Bunny.";
     "";
-    "To get more usage information on a specific command:";
-    "       bunny help <command>";
   ]
 
-(* Simple helper function to print out the help text. *)
-let print_help = List.iter
-                   (fun elem -> Printf.printf "%s\n" elem)
-                   help_lines
-
-(* If the help command is given another argument command, print the help text for that command. *)
-let print_help_command command = Printf.printf "unimplemented help: %s\n" command
+let help_string =
+  "The Bunny Programming Language 🐰\n\n\
+   usage: bunny <command> <arguments>\n\n\
+   The most commonly used bunny commands are:\n\
+   \tbuild     Compiles the current project to bytecode.\n\
+   \tcarrot    Interact with the carrot system to add or remove libraries.\n\
+   \tdoc       Use the documentation generator tool.\n\
+   \texec      Execute an installed binary carrot (program).\n\
+   \tformat    Format the current project, provided directory (recursively), or file.\n\
+   \thelp      Print this help text.\n\
+   \tnew       Create a new project or carrot skeleton.\n\
+   \trepl      Launch an interactive REPL for Bunny.\n\
+   \trun       Run a file containing Bunny code.\n\
+   \ttest      Runs all or provided tests for the current project.\n\
+   \tversion   Prints the current version of Bunny.\n\n\
+   To get more usage information on a specific command:\n\
+   \tbunny help <command>\n"
 
 (* Main program entrypoint, parses the arguments and dispatches the appropriate module. *)
-let () = print_help
+let () = Printf.printf "%s" help_string
