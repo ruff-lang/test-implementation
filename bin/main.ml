@@ -24,5 +24,22 @@ let full_help =
   ^ "To get more usage information on a specific command:\n"
   ^ "    bunny help <command>\n"
 
-(* Main program entrypoint, parses the arguments and dispatches the appropriate module. *)
-let () = Printf.printf "%s" full_help
+let () =
+  let number_of_arguments = Array.length Sys.argv in
+  if number_of_arguments < 2
+  then Printf.printf "%s" short_help
+  else
+    let command = Sys.argv.(1) in
+    match command with
+    | "build" -> Printf.printf "Unimplemented\n"
+    | "carrot" -> Printf.printf "Unimplemented\n"
+    | "doc" -> Printf.printf "Unimplemented\n"
+    | "exec" -> Printf.printf "Unimplemented\n"
+    | "format" -> Printf.printf "Unimplemented\n"
+    | "help" -> Printf.printf "%s" full_help
+    | "new" -> Printf.printf "Unimplemented\n"
+    | "repl" -> Printf.printf "Unimplemented\n"
+    | "run" -> Printf.printf "Unimplemented\n"
+    | "test" -> Printf.printf "Unimplemented\n"
+    | "version" -> Printf.printf "Unimplemented\n"
+    | _ -> Printf.printf "Command '%s' invalid, try 'help'.\n" command
