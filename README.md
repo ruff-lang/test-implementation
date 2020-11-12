@@ -26,6 +26,14 @@ You can run `bunny` directly using dune:
 
 ```
 $ dune exec bunny
+Usage: bunny <command> <argument>
+
+To get more usage information run 'bunny help'
+
+```
+
+```
+$ dune exec bunny help
 The Bunny Programming Language 🐰
 
 usage: bunny <command> <arguments>
