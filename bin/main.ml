@@ -1,4 +1,8 @@
-(* Main program entrypoint for Bunny. *)
+(*
+ * Main program entrypoint for the Bunny command line interface. There should be little to no
+ * real logic in here and should instead be dispatching commands to appropriate library interfaces
+ * imported from lib.
+ *)
 
 (* String to print when running bunny without any specified command. *)
 let short_help =
