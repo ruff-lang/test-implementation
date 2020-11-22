@@ -13,7 +13,7 @@ let short_help =
 let full_help =
   "The Bunny Programming Language 🐰\n\n"
   ^ "Usage: bunny <command> <arguments>\n\n"
-  ^ "The most commonly used bunny commands are:\n"
+  ^ "Some of the most commonly used bunny commands are:\n"
   ^ "    build     Compiles the current project to bytecode.\n"
   ^ "    carrot    Interact with the carrot system to add or remove libraries.\n"
   ^ "    doc       Use the documentation generator tool.\n"
