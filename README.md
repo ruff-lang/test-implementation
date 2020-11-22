@@ -29,5 +29,4 @@ $ dune exec bunny
 Usage: bunny <command> <argument>
 
 To get more usage information run 'bunny help'
-
 ```
