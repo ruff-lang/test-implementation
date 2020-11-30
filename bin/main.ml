@@ -5,28 +5,28 @@
  *)
 
 (* String to print when running bunny without any specified command. *)
-let short_help =
-  "Usage: bunny <command> <argument>\n\n"
-  ^ "To get more usage information run 'bunny help'\n"
+let short_help = "Usage: bunny <command> <argument>\n
+To get more usage information run 'bunny help'
+"
 
 (* String to print when runny the bunny help command. *)
-let full_help =
-  "The Bunny Programming Language 🐰\n\n"
-  ^ "Usage: bunny <command> <arguments>\n\n"
-  ^ "Some of the most commonly used bunny commands are:\n"
-  ^ "    build     Compiles the current project to bytecode.\n"
-  ^ "    carrot    Interact with the carrot system to add or remove libraries.\n"
-  ^ "    doc       Use the documentation generator tool.\n"
-  ^ "    exec      Execute an installed binary carrot (program).\n"
-  ^ "    format    Format the current project, provided directory (recursively), or file.\n"
-  ^ "    help      Print this help text.\n"
-  ^ "    new       Create a new project or carrot skeleton.\n"
-  ^ "    repl      Launch an interactive REPL for Bunny.\n"
-  ^ "    run       Run a file containing Bunny code.\n"
-  ^ "    test      Runs all or provided tests for the current project.\n"
-  ^ "    version   Prints the current version of Bunny.\n\n"
-  ^ "To get more usage information on a specific command:\n"
-  ^ "    bunny help <command>\n"
+let full_help = "The Bunny Programming Language 🐰\n
+Usage: bunny <command> <arguments>\n
+Some of the most commonly used bunny commands are:
+    build     Compiles the current project to bytecode.
+    carrot    Interact with the carrot system to add or remove libraries.
+    doc       Use the documentation generator tool.
+    exec      Execute an installed binary carrot (program).
+    format    Format the current project, provided directory (recursively), or file.
+    help      Print this help text.
+    new       Create a new project or carrot skeleton.
+    repl      Launch an interactive REPL for Bunny.
+    run       Run a file containing Bunny code.
+    test      Runs all or provided tests for the current project.
+    version   Prints the current version of Bunny.\n
+To get more usage information on a specific command:
+    bunny help <command>
+"
 
 let () =
   let number_of_arguments = Array.length Sys.argv in
