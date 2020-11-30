@@ -6,12 +6,17 @@
 
 (* String to print when running bunny without any specified command. *)
 let short_help =
-  "Usage: bunny <command> <argument>\n\nTo get more usage information run 'bunny help'\n"
+  "\x1B[1mUsage:\x1B[0m bunny <command> <argument>\n\n\
+   To get more usage information run 'bunny help'\n"
 
-(* String to print when runny the bunny help command. *)
+(*
+ * String to print when runny the bunny help command.
+ * "\x1B[1m" starts bolding text for Printf
+ * "\x1B[0m" finishing bolding text for Printf
+ *)
 let full_help =
-  "Usage: bunny <command> <arguments>\n\n\
-   Some of the most commonly used bunny commands are:\n\
+  "\x1B[1mUsage:\x1B[0m bunny <command> <arguments>\n\n\
+   \x1B[1mSome of the most commonly used bunny commands are:\x1B[0m\n\
   \    build     Compiles the current project to bytecode\n\
   \    carrot    Interact with the carrot system to add or remove libraries\n\
   \    doc       Use the documentation generator tool\n\
@@ -23,7 +28,7 @@ let full_help =
   \    run       Run a file containing Bunny code\n\
   \    test      Runs all or provided tests for the current project\n\
   \    version   Prints the current version of Bunny\n\n\
-   To get more usage information on a specific command:\n\
+   \x1B[1mTo get more usage information on a specific command:\x1B[0m\n\
   \    bunny help <command>\n"
 
 let () =
