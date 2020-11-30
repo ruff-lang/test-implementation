@@ -16,7 +16,7 @@ let full_help =
   \    carrot    Interact with the carrot system to add or remove libraries\n\
   \    doc       Use the documentation generator tool\n\
   \    exec      Execute an installed binary carrot (program)\n\
-  \    format    Format the current project, provided directory (recursively), or file\n\
+  \    format    Format the current project, directory (recursively), or file\n\
   \    help      Print this help text\n\
   \    new       Create a new project or carrot skeleton\n\
   \    repl      Launch an interactive REPL for Bunny\n\
