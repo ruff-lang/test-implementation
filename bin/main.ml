@@ -11,7 +11,7 @@ let short_help =
 
 (* String to print when runny the bunny help command. *)
 let full_help =
-  "The Bunny Programming Language 🐰\n\n"
+  "The Bunny Programming Language 🐰\n\n" 
   ^ "Usage: bunny <command> <arguments>\n\n"
   ^ "Some of the most commonly used bunny commands are:\n"
   ^ "    build     Compiles the current project to bytecode.\n"
@@ -30,8 +30,7 @@ let full_help =
 
 let () =
   let number_of_arguments = Array.length Sys.argv in
-  if number_of_arguments < 2
-  then Printf.printf "%s" short_help
+  if number_of_arguments < 2 then Printf.printf "%s" short_help
   else
     let command = Sys.argv.(1) in
     match command with
@@ -46,4 +45,4 @@ let () =
     | "run" -> Printf.printf "Unimplemented\n"
     | "test" -> Printf.printf "Unimplemented\n"
     | "version" -> Printf.printf "Unimplemented\n"
-    | _ -> Printf.printf "Command '%s' invalid, try 'help'.\n" command
+    | _ -> Printf.printf "Command '%s' is not valid, try 'help'.\n" command
