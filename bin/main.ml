@@ -11,7 +11,7 @@ let short_help =
 
 (* String to print when runny the bunny help command. *)
 let full_help =
-  "The Bunny Programming Language 🐰\n\n" 
+  "The Bunny Programming Language 🐰\n\n"
   ^ "Usage: bunny <command> <arguments>\n\n"
   ^ "Some of the most commonly used bunny commands are:\n"
   ^ "    build     Compiles the current project to bytecode.\n"
