@@ -4,6 +4,7 @@
  * imported from lib.
  *)
 
+
 (* String to print when runny the bunny help command, or without any arguments. *)
 let full_help =
   "Usage: bunny <command> <arguments>\n\n" ^ "Some of the most commonly used bunny commands are:\n"
@@ -36,5 +37,5 @@ let () =
     | "repl" -> Printf.printf "Unimplemented\n"
     | "run" -> Printf.printf "Unimplemented\n"
     | "test" -> Printf.printf "Unimplemented\n"
-    | "version" -> Printf.printf "Unimplemented\n"
+    | "version" -> Bunny.Version.print_version
     | _ -> Printf.printf "Command '%s' is not valid, try 'help'.\n" command
