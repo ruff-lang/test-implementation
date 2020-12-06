@@ -1,5 +1,9 @@
-(* Increment bunny_version for every new version of Bunny. This is only used for printing.*)
+(* Increment version for every new version of Bunny. This is only used for printing. *)
 
-let print_version =
-  let bunny_version = "v0.0.1" in
-  Printf.printf "Bunny version: %s\n" bunny_version
+open Printf
+
+let print_version () =
+  let version = "v0.0.1" in
+  let url = "https://bunny-lang.org" in
+  let string = "Bunny Programming Language" in
+  printf "%s\nVersion: %s\n%s\n" string version url

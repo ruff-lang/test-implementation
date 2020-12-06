@@ -4,6 +4,8 @@
  * imported from lib.
  *)
 
+open Printf
+open Bunny
 
 (* String to print when runny the bunny help command, or without any arguments. *)
 let full_help =
@@ -23,19 +25,21 @@ let full_help =
 
 let () =
   let number_of_arguments = Array.length Sys.argv in
-  if number_of_arguments < 2 then Printf.printf "%s" full_help
+  if number_of_arguments < 2 then printf "%s" full_help
   else
     let command = Sys.argv.(1) in
+    let unimplemented command =
+      printf "Command '%s' is unimplemented.\n" command in
     match command with
-    | "build" -> Printf.printf "Unimplemented\n"
-    | "carrot" -> Printf.printf "Unimplemented\n"
-    | "doc" -> Printf.printf "Unimplemented\n"
-    | "exec" -> Printf.printf "Unimplemented\n"
-    | "format" -> Printf.printf "Unimplemented\n"
-    | "help" -> Printf.printf "%s" full_help
-    | "new" -> Printf.printf "Unimplemented\n"
-    | "repl" -> Printf.printf "Unimplemented\n"
-    | "run" -> Printf.printf "Unimplemented\n"
-    | "test" -> Printf.printf "Unimplemented\n"
-    | "version" -> Bunny.Version.print_version
-    | _ -> Printf.printf "Command '%s' is not valid, try 'help'.\n" command
+    | "build" -> unimplemented command
+    | "carrot" -> printf "Unimplemented\n"
+    | "doc" -> unimplemented command
+    | "exec" -> unimplemented command
+    | "format" -> unimplemented command
+    | "help" -> printf "%s" full_help
+    | "new" -> unimplemented command
+    | "repl" -> unimplemented command
+    | "run" -> unimplemented command
+    | "test" -> unimplemented command
+    | "version" -> Version.print_version()
+    | _ -> printf "Command '%s' is not valid, try 'help'.\n" command
