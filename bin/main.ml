@@ -4,11 +4,7 @@
  * imported from lib.
  *)
 
-(* String to print when running bunny without any specified command. *)
-let short_help =
-  "Usage: bunny <command> <argument>\n\n" ^ "To get more usage information run 'bunny help'\n"
-
-(* String to print when runny the bunny help command. *)
+(* String to print when runny the bunny help command, or without any arguments. *)
 let full_help =
   "Usage: bunny <command> <arguments>\n\n" ^ "Some of the most commonly used bunny commands are:\n"
   ^ "    build     Compiles the current project to bytecode.\n"
@@ -26,7 +22,7 @@ let full_help =
 
 let () =
   let number_of_arguments = Array.length Sys.argv in
-  if number_of_arguments < 2 then Printf.printf "%s" short_help
+  if number_of_arguments < 2 then Printf.printf "%s" full_help
   else
     let command = Sys.argv.(1) in
     match command with
