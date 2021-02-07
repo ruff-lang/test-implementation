@@ -33,4 +33,4 @@ To get more usage information run 'bunny help'
 
 # License
 
-MIT. See [LICENSE](LICENSE).
+MPL-2.0, See [LICENSE](LICENSE).
