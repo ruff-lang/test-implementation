@@ -46,5 +46,5 @@ let () =
     | "repl" -> unimplemented command
     | "run" -> unimplemented command
     | "test" -> unimplemented command
-    | "version" -> Version.print_version ()
+    | "version" -> Utilities.print_version ()
     | _ -> printf "Command '%s' is not valid, try 'help'.\n" command
