@@ -20,8 +20,8 @@ let bunny_ascii =
   \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/ 
 |}
 
-let print_ascii_header () = printf "%s" bunny_ascii
+let print_ascii_header () = printf "%s\n" bunny_ascii
 
 let print_version () =
   print_ascii_header ();
-  printf "\n  version: %s\n  website: %s\n\n" version website
+  printf "  version: %s\n  website: %s\n\n" version website
