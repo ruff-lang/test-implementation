@@ -8,8 +8,16 @@
 
 open Printf
 
-let print_version () =
-  let version = "v0.0.1" in
-  let url = "https://bunny-lang.org" in
-  let string = "Bunny Programming Language" in
-  printf "%s\nVersion: %s\n%s\n" string version url
+let version = "0.0.1"
+
+let website = "https://bunny-lang.org"
+
+let bunny_ascii =
+  {| ______     __  __     __   __     __   __     __  __    
+/\  == \   /\ \/\ \   /\ "-.\ \   /\ "-.\ \   /\ \_\ \   
+\ \  __<   \ \ \_\ \  \ \ \-.  \  \ \ \-.  \  \ \____ \  
+ \ \_____\  \ \_____\  \ \_\\"\_\  \ \_\\"\_\  \/\_____\ 
+  \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/ 
+|}
+
+let print_version () = printf "%s\n  version: %s\n  website: %s\n\n" bunny_ascii version website

@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *)
- 
+
 (* 
  * Main program entrypoint for the Bunny command line interface. There should be little to no
  * real logic in here and should instead be dispatching commands to appropriate library interfaces
@@ -34,8 +34,7 @@ let () =
   if number_of_arguments < 2 then printf "%s" full_help
   else
     let command = Sys.argv.(1) in
-    let unimplemented command =
-      printf "Command '%s' is unimplemented.\n" command in
+    let unimplemented command = printf "Command '%s' is unimplemented.\n" command in
     match command with
     | "build" -> unimplemented command
     | "carrot" -> printf "Unimplemented\n"
@@ -47,5 +46,5 @@ let () =
     | "repl" -> unimplemented command
     | "run" -> unimplemented command
     | "test" -> unimplemented command
-    | "version" -> Version.print_version()
+    | "version" -> Version.print_version ()
     | _ -> printf "Command '%s' is not valid, try 'help'.\n" command

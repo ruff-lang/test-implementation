@@ -1,2 +1,3 @@
 (library
- (name bunny))
+ (name bunny)
+ (libraries core))
