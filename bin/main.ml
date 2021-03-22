@@ -37,7 +37,7 @@ let () =
     let unimplemented command = printf "Command '%s' is unimplemented.\n" command in
     match command with
     | "build" -> unimplemented command
-    | "carrot" -> printf "Unimplemented\n"
+    | "carrot" -> unimplemented command
     | "doc" -> unimplemented command
     | "exec" -> unimplemented command
     | "format" -> unimplemented command
