@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  *)
 
-(* 
+(*
  * Main program entrypoint for the Bunny command line interface. There should be little to no
  * real logic in here and should instead be dispatching commands to appropriate library interfaces
  * imported from lib.
@@ -29,6 +29,17 @@ let full_help =
   ^ "    version   Prints the current version of Bunny.\n\n"
   ^ "To get more usage information on a specific command:\n" ^ "    bunny help <command>\n"
 
+let help_handler ?command () =
+  match command with
+  | None -> printf "%s" full_help
+  | Some c ->
+      printf "Usage: bunny %s " c;
+      (* printf "%s\n" command_options c (); *)
+      (* printf "%s\n" command_help_text c (); *)
+      printf "\n"
+
+(* let help_handler () = printf "%s" full_help *)
+
 let () =
   let number_of_arguments = Array.length Sys.argv in
   if number_of_arguments < 2 then printf "%s" full_help
@@ -41,7 +52,8 @@ let () =
     | "doc" -> unimplemented command
     | "exec" -> unimplemented command
     | "format" -> unimplemented command
-    | "help" -> printf "%s" full_help
+    | "help" ->
+        if number_of_arguments > 2 then help_handler ~command:Sys.argv.(2) () else help_handler ()
     | "new" -> unimplemented command
     | "repl" -> unimplemented command
     | "run" -> unimplemented command
