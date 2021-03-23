@@ -5,9 +5,9 @@
  *)
 
 (*
- * Main program entrypoint for the Bunny command line interface. There should be little to no
- * real logic in here and should instead be dispatching commands to appropriate library interfaces
- * imported from lib.
+ * Main program entrypoint for the Bunny command line interface. There should be little to
+ * no real logic in here and should instead be dispatching commands to appropriate library
+ * interfaces imported from lib.
  *)
 
 open Printf
@@ -37,8 +37,6 @@ let help_handler ?command () =
       (* printf "%s\n" command_options c (); *)
       (* printf "%s\n" command_help_text c (); *)
       printf "\n"
-
-(* let help_handler () = printf "%s" full_help *)
 
 let () =
   let number_of_arguments = Array.length Sys.argv in
