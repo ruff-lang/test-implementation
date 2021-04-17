@@ -11,7 +11,6 @@
  *)
 
 open Printf
-open Bunny
 
 (* String to print when runny the bunny help command, or without any arguments. *)
 let full_help =
@@ -28,6 +27,24 @@ let full_help =
   ^ "    test      Runs all or provided tests for the current project.\n"
   ^ "    version   Prints the current version of Bunny.\n\n"
   ^ "To get more usage information on a specific command:\n" ^ "    bunny help <command>\n"
+
+let version = "0.0.1"
+
+let website = "https://bunny-lang.org"
+
+let bunny_ascii =
+  {| ______     __  __     __   __     __   __     __  __
+/\  == \   /\ \/\ \   /\ "-.\ \   /\ "-.\ \   /\ \_\ \
+\ \  __<   \ \ \_\ \  \ \ \-.  \  \ \ \-.  \  \ \____ \
+ \ \_____\  \ \_____\  \ \_\\"\_\  \ \_\\"\_\  \/\_____\
+  \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/
+|}
+
+let print_ascii_header () = printf "%s\n" bunny_ascii
+
+let print_version () =
+  print_ascii_header ();
+  printf "  Version: %s\n" version
 
 let help_handler ?command () =
   match command with
@@ -56,5 +73,5 @@ let () =
     | "repl" -> unimplemented command
     | "run" -> unimplemented command
     | "test" -> unimplemented command
-    | "version" -> Utilities.print_version ()
+    | "version" -> print_version ()
     | _ -> printf "Command '%s' is not valid, try 'help'.\n" command
