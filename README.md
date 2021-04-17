@@ -26,9 +26,23 @@ You can run `bunny` directly using dune:
 
 ```
 $ dune exec bunny
-Usage: bunny <command> <argument>
+Usage: bunny <command> <arguments>
 
-To get more usage information run 'bunny help'
+Some of the most commonly used bunny commands are:
+	build     Compiles the current project to bytecode.
+	carrot    Interact with the carrot system to add or remove libraries.
+	doc       Use the documentation generator tool.
+	exec      Execute an installed binary carrot (program).
+	format    Format the current project, provided directory (recursively), or file.
+	help      Print this help text.
+	new       Create a new project or carrot skeleton.
+	repl      Launch an interactive REPL for Bunny.
+	run       Run a file containing Bunny code.
+	test      Runs all or provided tests for the current project.
+	version   Prints the current version of Bunny.
+
+To get more usage information on a specific command:
+	bunny help <command>
 ```
 
 # License
