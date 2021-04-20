@@ -37,4 +37,6 @@ $ dune exec bunny help
 
 # License
 
+<img alt="GitHub" src="https://img.shields.io/github/license/bunny-lang/bunny">
+
 MPL-2.0, See [LICENSE](LICENSE).
