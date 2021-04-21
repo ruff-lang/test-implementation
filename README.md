@@ -25,14 +25,8 @@ $ opam install dune
 You can run `bunny` directly using dune:
 
 ```
-$ dune exec bunny help
- ______     __  __     __   __     __   __     __  __
-/\  == \   /\ \/\ \   /\ "-.\ \   /\ "-.\ \   /\ \_\ \
-\ \  __<   \ \ \_\ \  \ \ \-.  \  \ \ \-.  \  \ \____ \
- \ \_____\  \ \_____\  \ \_\\"\_\  \ \_\\"\_\  \/\_____\
-  \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/
-
-  Version: 0.0.1
+$ dune exec bunny version
+Version: 0.0.1
 ```
 
 # License
