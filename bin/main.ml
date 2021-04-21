@@ -30,21 +30,7 @@ let full_help =
 
 let version = "0.0.1"
 
-let website = "https://bunny-lang.org"
-
-let bunny_ascii =
-  {| ______     __  __     __   __     __   __     __  __
-/\  == \   /\ \/\ \   /\ "-.\ \   /\ "-.\ \   /\ \_\ \
-\ \  __<   \ \ \_\ \  \ \ \-.  \  \ \ \-.  \  \ \____ \
- \ \_____\  \ \_____\  \ \_\\"\_\  \ \_\\"\_\  \/\_____\
-  \/_____/   \/_____/   \/_/ \/_/   \/_/ \/_/   \/_____/
-|}
-
-let print_ascii_header () = printf "%s\n" bunny_ascii
-
-let print_version () =
-  print_ascii_header ();
-  printf "  Version: %s\n" version
+let print_version () = printf "Version: %s\n" version
 
 let help_handler ?command () =
   match command with
